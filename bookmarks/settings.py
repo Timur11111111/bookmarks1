@@ -97,12 +97,7 @@ AUTHENTICATION_BACKENDS = [
         'django.contrib.auth.backends.ModelBackend',
         'account.authentication.EmailAuthBackend',
         'social_core.backends.github.GithubOAuth2',
-]
-
-SOCIAL_AUTH_GITHUB_KEY = 'Ov23liYJQhX7oJdqYnGU'  
-SOCIAL_AUTH_GITHUB_SECRET = '8d5a707f512e54d9dcae05aa012f3a7ff6b9c2b8' 
-SOCIAL_AUTH_GITHUB_SCOPE = ['email']
-SOCIAL_AUTH_GITHUB_REDIRECT_URI = 'http://localhost:8000/auth/complete/github/'
+    ]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -172,3 +167,10 @@ SOCIAL_AUTH_PIPELINE = [
     'social_core.pipeline.social_auth.load_extra_data',
     'social_core.pipeline.user.user_details',
 ]
+
+
+
+SOCIAL_AUTH_GITHUB_KEY = 'Ov23liYJQhX7oJdqYnGU'  
+SOCIAL_AUTH_GITHUB_SECRET = '8d5a707f512e54d9dcae05aa012f3a7ff6b9c2b8' 
+
+
