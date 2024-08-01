@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from ...mail_code import bookmarks_back
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -149,7 +150,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'timur3373586@gmail.com'
-EMAIL_HOST_PASSWORD = 'ltkm hbug irov psmr'
+EMAIL_HOST_PASSWORD = bookmarks_back
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
