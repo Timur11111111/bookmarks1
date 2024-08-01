@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from ...mail_code import bookmarks_back
+# from ...mail_code import bookmarks_back
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,7 +96,13 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
         'django.contrib.auth.backends.ModelBackend',
         'account.authentication.EmailAuthBackend',
+        'social_core.backends.github.GithubOAuth2',
 ]
+
+SOCIAL_AUTH_GITHUB_KEY = 'Ov23liYJQhX7oJdqYnGU'  
+SOCIAL_AUTH_GITHUB_SECRET = '8d5a707f512e54d9dcae05aa012f3a7ff6b9c2b8' 
+SOCIAL_AUTH_GITHUB_SCOPE = ['email']
+SOCIAL_AUTH_GITHUB_REDIRECT_URI = 'http://localhost:8000/auth/complete/github/'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -150,7 +156,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'timur3373586@gmail.com'
-EMAIL_HOST_PASSWORD = bookmarks_back
+EMAIL_HOST_PASSWORD = 'ltkm hbug irov psmr'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
