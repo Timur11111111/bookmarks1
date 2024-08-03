@@ -175,4 +175,7 @@ SOCIAL_AUTH_PIPELINE = [
 SOCIAL_AUTH_GITHUB_KEY = 'Ov23liYJQhX7oJdqYnGU'  
 SOCIAL_AUTH_GITHUB_SECRET = '8d5a707f512e54d9dcae05aa012f3a7ff6b9c2b8' 
 
-
+if DEBUG:
+    import mimetypes
+    mimetypes.add_type('application/javascript', '.js', True)
+    mimetypes.add_type('text/css', '.css', True)
